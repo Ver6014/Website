@@ -26,6 +26,29 @@
             font-size: 1.5em;
             text-shadow: 1px 1px 0 #000;
         }
+	.box{
+ 		 transition:width .5s ease,height .5s ease;
+	}
+	.box:nth-child(odd){
+ 		 width:100px;
+ 		 height:100px;
+  		background:linear-gradient(#DCE35B,#45B649);
+  		&:hover{
+    		 width:130px;
+ 		 height:130px;
+ 		 }
+}
+	.box:nth-child(even){
+ 		 width:100px;
+ 		 height:100px;
+  		background:linear-gradient(#B64549,#E3DC5B);
+ 		 &:hover{
+     		width:130px;
+  		height:130px;
+  }
+}
+
+
         .container {
             margin-top: 50px;
         }
@@ -37,24 +60,21 @@
             border-radius: 15px;
         }
     </style>
-    <script>addEventListener('mousemove', e => {
-	document.documentElement.style = `--x: ${e.clientX}px; --y: ${e.clientY}px; `
-})</script>
 </head>
 <body>
     <div class="container">
         <h1>The Llemon - Vermillion</h1>
         <a href="https://linktr.ee/Llemon_" target="_blank">
-    <button type="button" style="display: inline-block; padding: 10px 20px; background-color: #ff71ce; color: white; text-align: center; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">Link Tree</button>
+    <button class="box" type="button" >Link Tree</button>
         <a href="https://jokers-eye.blogspot.com/" target="_blank">
-    <button type="button" style="display: inline-block; padding: 10px 20px; background-color: #ff71ce; color: white; text-align: center; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">Blog</button>
+    <button class="box" type="button" >Blog</button>
         <a href="thellemon.bandcamp.com" target="_blank">
-    <button type="button" style="display: inline-block; padding: 10px 20px; background-color: #ff71ce; color: white; text-align: center; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">Band Camp</button>
+    <button class="box" type="button" >Band Camp</button>
          <a href="https://ver6014.github.io/about/" target="_blank">
-    <button type="button" style="display: inline-block; padding: 10px 20px; background-color: #ff71ce; color: white; text-align: center; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">About Me</button>
+    <button class="box" type="button" >About Me</button>
         <a href="https://ver6014.github.io/EYESPAGE/" target="_blank">
-    <button type="button" style="display: inline-block; padding: 10px 20px; background-color: #ff71ce; color: white; text-align: center; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">Eyes?</button>
-         
+    <button class="box" type="button"">Eyes?</button>
+         <!--style="display: inline-block; padding: 10px 20px; background-color: #ff71ce; color: white; text-align: center; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;"-->
 </a>
         
 </a>

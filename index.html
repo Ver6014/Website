@@ -7,6 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Llemon - Vermillion</title>
     <style>
+        @property --x {
+	syntax: '<length-percentage>';
+	initial-value: 50vw;
+	inherits: false
+}
+
+@property --y {
+	syntax: '<length-percentage>';
+	initial-value: 50vh;
+	inherits: false
+}
+
+html {
+	--pattern: radial-gradient(closest-side, #777, #fff) 0/ 1em 1em space;
+	--map: 
+		radial-gradient(circle farthest-corner at var(--x) var(--y), #888, #fff);
+	height: 100%;
+	background: var(--pattern), var(--map);
+	background-blend-mode: multiply;
+	filter: contrast(16);	
+	transition: .35s cubic-bezier(.1,0,.5,1.5);
+	transition-property: --x, --y
+}
         body {
             background-color: #ff77ff;
             color: #00ffff;
@@ -34,6 +57,9 @@
             border-radius: 15px;
         }
     </style>
+    <script>addEventListener('mousemove', e => {
+	document.documentElement.style = `--x: ${e.clientX}px; --y: ${e.clientY}px; `
+})</script>
 </head>
 <body>
     <div class="container">
@@ -81,7 +107,7 @@
         <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2462503037/size=large/bgcol=333333/linkcol=fe7eaf/tracklist=false/transparent=true/" seamless><a href="https://thellemon.bandcamp.com/album/phone-number">Phone Number by THE Llemon</a></iframe>
         <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=4006744902/size=large/bgcol=333333/linkcol=fe7eaf/tracklist=false/transparent=true/" seamless><a href="https://thellemon.bandcamp.com/album/who-am-i-to-judge">Who am I to Judge by THE Llemon</a></iframe>
         <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=348680794/size=large/bgcol=333333/linkcol=fe7eaf/tracklist=false/transparent=true/" seamless><a href="https://thellemon.bandcamp.com/album/the-samples">The Samples by THE Llemon</a></iframe>
-    </div>
+
 </body>
     
 </html>

@@ -8,20 +8,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-		transform-origin:preserve-3d;
-  		perspective:500px;
-            background-color: #ef879d;
-            color: #00ffff;
-            font-family: 'Arial', sans-serif;
+            
+                body {
             text-align: center;
             margin: 0;
             padding: 0;
-	
+            background:
+                repeating-linear-gradient(transparent, #4d9f0c 40px),
+                repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
+            }
 	
 
 		
-        }
+        
         h1 {
             font-size: 4em;
             text-shadow: 2px 2px 0 #000;
@@ -36,7 +35,7 @@
 	.box:nth-child(odd){
  		 width:100px;
  		 height:100px;
-  		background:linear-gradient(#ef879d,#ef879d);
+  		background:linear-gradient(#87eaef,#87aaef);
   		&:hover{
     		 width:130px;
  		 height:130px;
@@ -47,7 +46,7 @@
 	.box:nth-child(even){
  		 width:100px;
  		 height:100px;
-  		background:linear-gradient(#ef879d,#ef879d);
+  		background:linear-gradient(#87eaef,#87aaef);
  		 &:hover{
      		width:130px;
   		height:130px;
@@ -81,8 +80,7 @@
         <a href="https://thellemon.bandcamp.com" target="_blank">
     <button class="box" type="button" >Band Camp</button>
          <a href="https://ver6014.github.io/about/" target="_blank">
-    <button class="box" type="button" >About Me</button>
-        <a href="https://ver6014.github.io/EYESPAGE/" target="_blank">
+    <button class="box" type="button" onclick="about()">About Me</button>
     <button class="box" type="button">Eyes?</button>
 		<a href="https://github.com/Ver6014" target="_blank">
     <button class="box" type="button" >Github</button>
@@ -93,7 +91,6 @@
 </a>
         <p> 
             <br> <br>
-            <img src="336.png">
             You can contact me at _vermillionvirtualenterprise@gmail.com_
 		
         <p>  <p>
@@ -102,6 +99,12 @@
 
 </body>
 </html>
+
+<script>
+function about() {
+  location.replace("/Users/victorschulhoff/Desktop/website/about-main/index.html")
+}
+</script>
     
 </html>
 
